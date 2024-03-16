@@ -3,6 +3,8 @@ import sort from "./sort.js";
 const build = data => {
     const ul = document.querySelector('ul');
 
+    console.log(data);
+
     data.forEach(e => {
         let li = document.createElement('li');
         let index = document.createElement('span');
@@ -18,7 +20,6 @@ const build = data => {
     })
 
     sort(data);
-
 }
 
 export default build;
