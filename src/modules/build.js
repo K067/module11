@@ -1,17 +1,15 @@
 import sort from "./sort.js";
 
-const build = data => {
+const build = buffer => {
     const ul = document.querySelector('ul');
 
-    console.log(data);
-
-    data.forEach(e => {
+    buffer.forEach(({ id, name }) => {
         let li = document.createElement('li');
         let index = document.createElement('span');
         let user = document.createElement('span');
 
-        index.textContent = e.id;
-        user.textContent = e.name;
+        index.textContent = id;
+        user.textContent = name;
 
         li.appendChild(index);
         li.appendChild(user);
@@ -19,7 +17,8 @@ const build = data => {
         ul.appendChild(li);
     })
 
-    sort(data);
+    sort(buffer);
+
 }
 
 export default build;
