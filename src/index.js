@@ -1,3 +1,3 @@
 import fetchData from "./modules/fetchData.js";
 
-fetchData();
+document.addEventListener('DOMContentLoaded', fetchData);
