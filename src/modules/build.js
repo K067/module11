@@ -1,11 +1,11 @@
 import sort from "./sort.js";
 
-const build = buffer => {
+const build = data => {
     const ul = document.querySelector('ul');
 
     let output = '';
 
-    buffer.forEach(({ id, name }) => {
+    data.forEach(({ id, name }) => {
         output +=
             `<li>
         <span>${id}</span>
@@ -14,9 +14,9 @@ const build = buffer => {
     })
 
     ul.innerHTML = output;
+    console.log(data);
 
-    sort(buffer);
-
+    sort(data);
 }
 
 export default build;

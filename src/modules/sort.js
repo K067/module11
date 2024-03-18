@@ -1,14 +1,18 @@
 import build from "./build.js";
+import fetchData from "./fetchData.js";
 
-const sort = buffer => {
+const sort = data => {
     const arrow = document.querySelector('img');
     const input = document.querySelector('input');
 
     input.addEventListener('input', e => {
-        const element = parseInt(e.target.value);
-        const user = buffer.filter(e => e.id === element);
+        const element = e.target.value;
 
-        build(user)
+        if (element === '') {
+            fetchData();
+        } else {
+            build(data.filter(e => e.id === parseInt(element)));
+        }
     })
 }
 
