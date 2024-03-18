@@ -1,4 +1,5 @@
 import build from "./build.js";
+import sort from "./sort.js";
 
 const fetchData = () => {
     let url = `https://jsonplaceholder.typicode.com/users`;
@@ -9,6 +10,7 @@ const fetchData = () => {
             const data = await res.json();
 
             build(data);
+            sort(data);
         } catch (error) {
             console.log(error);
         }

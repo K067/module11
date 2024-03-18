@@ -1,5 +1,3 @@
-import sort from "./sort.js";
-
 const build = data => {
     const ul = document.querySelector('ul');
 
@@ -15,8 +13,6 @@ const build = data => {
 
     ul.innerHTML = output;
     console.log(data);
-
-    sort(data);
 }
 
 export default build;

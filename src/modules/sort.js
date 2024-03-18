@@ -1,5 +1,4 @@
 import build from "./build.js";
-import fetchData from "./fetchData.js";
 
 const sort = data => {
     const arrow = document.querySelector('img');
@@ -9,7 +8,7 @@ const sort = data => {
         const element = e.target.value;
 
         if (element === '') {
-            fetchData();
+            build(data);
         } else {
             build(data.filter(e => e.id === parseInt(element)));
         }
