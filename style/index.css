@@ -114,3 +114,7 @@ span {
     align-items: center;
     gap: 10px;
 }
+
+.rotate {
+    transform: rotate(180deg);
+}
