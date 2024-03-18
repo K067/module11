@@ -5,7 +5,7 @@ const sort = data => {
     const input = document.querySelector('input');
 
     input.addEventListener('input', e => {
-        const element = e.target.value;
+        const element = e.target.value.trim();
 
         if (element === '') {
             build(data);
